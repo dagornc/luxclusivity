@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portail Agent Luxclusivity - Accédez aux ressources, mandats exclusifs et outils pour exceller dans l'immobilier de prestige.">
+    <meta name="keywords" content="portail agent, immobilier de luxe, Luxclusivity, mandats exclusifs, outils agent immobilier, réseau immobilier prestige">
+    <title>Portail Agent - Luxclusivity</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-emblem">
+                    <div class="logo-diamond"></div>
+                    <i class="fas fa-network-wired logo-house"></i>
+                    <i class="fas fa-user-tie logo-key"></i>
+                </div>
+                <span id="logo-text">Luxclusivity</span>
+            </a>
+            
+            <!-- Panneau de Recherche Avancée (initialement caché) -->
+            <div class="header-search-panel" id="header-search-panel">
+                <div class="search-panel-content">
+                    <input type="search" id="main-search-input" placeholder="Rechercher par mot-clé, référence...">
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <label for="filter-type">Type de Bien</label>
+                            <select id="filter-type" name="type">
+                                <option value="all">Tous Types</option>
+                                <option value="villa">Villa</option>
+                                <option value="penthouse">Penthouse</option>
+                                <option value="chalet">Chalet</option>
+                                <option value="domaine">Domaine</option>
+                                <option value="appartement">Appartement</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="filter-location">Localisation</label>
+                            <select id="filter-location" name="location">
+                                <option value="all">Toutes Localisations</option>
+                                <option value="paris">Paris</option>
+                                <option value="cote-azur">Côte d'Azur</option>
+                                <option value="alpes">Alpes</option>
+                                <option value="provence">Provence</option>
+                                <option value="monaco">Monaco</option>
+                                <option value="international">International</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="filter-price">Budget Indicatif</label>
+                            <select id="filter-price" name="price">
+                                <option value="all">Tous Budgets</option>
+                                <option value="5m">Moins de 5M€</option>
+                                <option value="5m-10m">5M€ - 10M€</option>
+                                <option value="10m-15m">10M€ - 15M€</option>
+                                <option value="15m-plus">Plus de 15M€</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary search-submit-btn">Rechercher</button>
+                </div>
+                 <button class="search-panel-close" aria-label="Fermer la recherche"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <nav class="header-nav">
+                <a href="#mandates">Mandats</a>
+                <a href="#values">Valeurs</a>
+                <a href="#resources">Ressources</a>
+                <a href="#training">Formation</a>
+                <a href="#network">Réseau</a>
+                <a href="#support">Support</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-toggle-btn" id="search-toggle" aria-label="Rechercher">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                <a href="#support" class="btn-primary">Support Agent</a>
+            </div>
+            
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-nav">
+        <button class="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#mandates">Mandats</a></li>
+            <li><a href="#values">Valeurs</a></li>
+            <li><a href="#resources">Ressources</a></li>
+            <li><a href="#training">Formation</a></li>
+            <li><a href="#network">Réseau</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+        <div class="mobile-nav-actions">
+            <a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+            <a href="#support" class="btn-primary">Support Agent</a>
+        </div>
+    </div>
+
+    <!-- Contenu Principal -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('images/hero-agent.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/properties/villa-spain.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/properties/chateau-france.jpg');"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>Portail <strong>Agent Luxclusivity</strong></h1>
+                    <p>Votre plateforme centrale pour accéder aux mandats exclusifs, aux outils marketing et aux ressources de formation du réseau.</p>
+                    <a href="#mandates" class="btn btn-primary">Consulter les Mandats</a>
+                </div>
+            </div>
+            <div class="hero-nav">
+                <button id="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Network Section (Anciennement About) -->
+        <section id="network" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="images/agent-collaboration.jpg" alt="Agents Luxclusivity en collaboration">
+                    </div>
+                    <div class="about-content">
+                        <h2>La Force de Notre <strong>Réseau</strong></h2>
+                        <p>Rejoindre Luxclusivity, c'est intégrer un réseau d'élite d'agents immobiliers spécialisés dans le prestige. Nous partageons des valeurs d'excellence, de discrétion et une connaissance inégalée du marché haut de gamme.</p>
+                        <p>Bénéficiez d'une synergie unique, d'un partage de mandats exclusifs et d'une réputation internationale qui ouvre les portes des transactions les plus confidentielles.</p>
+                        <p>Nous investissons dans votre succès en vous fournissant un support constant et des opportunités de développement uniques.</p>
+                        <a href="#resources" class="btn btn-secondary">Découvrir nos avantages</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section id="values" class="values-section">
+            <div class="container">
+                <div class="values-intro">
+                    <h2>Nos <strong>Valeurs</strong></h2>
+                    <p>Les piliers qui guident chaque action au sein du réseau Luxclusivity et définissent notre excellence collective.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-gem"></i></div>
+                        <h3>Excellence</h3>
+                        <p>Viser la perfection dans chaque transaction, chaque interaction et chaque service rendu à nos clients et partenaires.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-user-secret"></i></div>
+                        <h3>Discrétion</h3>
+                        <p>Garantir la confidentialité absolue pour nos clients et opérer avec le plus grand tact dans toutes nos démarches.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-handshake-angle"></i></div>
+                        <h3>Intégrité</h3>
+                        <p>Agir avec honnêteté, transparence et éthique, en construisant des relations de confiance durables.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Innovation</h3>
+                        <p>Adopter les nouvelles technologies et approches pour rester à la pointe du marché immobilier de prestige.</p>
+                    </div>
+                     <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-users-cog"></i></div>
+                        <h3>Collaboration</h3>
+                        <p>Favoriser l'entraide, le partage de connaissances et la synergie au sein du réseau pour une réussite collective.</p>
+                    </div>
+                     <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-concierge-bell"></i></div>
+                        <h3>Service d'Exception</h3>
+                        <p>Offrir un accompagnement sur-mesure et anticiper les besoins pour dépasser les attentes de nos clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mandates Section (Anciennement Properties) -->
+        <section id="mandates" class="properties-section">
+            <div class="container">
+                <div class="properties-intro">
+                    <h2>Mandats <strong>Exclusifs</strong></h2>
+                    <p>Accédez à notre portefeuille confidentiel de propriétés d'exception, réservé aux agents accrédités Luxclusivity.</p>
+                </div>
+                
+                <!-- Filtres Mandats -->
+                <div class="mandate-filters">
+                    <button class="filter-btn active" data-filter="all">Tous les Types</button>
+                    <button class="filter-btn" data-filter="villa">Villas</button>
+                    <button class="filter-btn" data-filter="penthouse">Penthouses</button>
+                    <button class="filter-btn" data-filter="chalet">Chalets</button>
+                    <button class="filter-btn" data-filter="domaine">Domaines</button>
+                    <button class="filter-btn" data-filter="appartement">Appartements</button>
+                    <button class="filter-btn" data-filter="off-market">Off-Market</button>
+                </div>
+                
+                <div class="properties-grid">
+                    <!-- Propriété 1 -->
+                    <div class="property-card villa">
+                        <div class="property-badge">Mandat Exclusif</div>
+                        <div class="property-image">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/properties/villa-sea.jpg" alt="Villa contemporaine avec vue mer">
+                        </div>
+                        <div class="property-content">
+                            <span class="property-location">Saint-Jean-Cap-Ferrat</span>
+                            <h3 class="property-title">Villa contemporaine vue panoramique</h3>
+                            <p class="property-price">Commission Indicative : 3%</p>
+                            <div class="property-features">
+                                <span class="property-feature"><i class="fas fa-ruler-combined"></i> 450 m²</span>
+                                <span class="property-feature"><i class="fas fa-bed"></i> 5 chambres</span>
+                                <span class="property-feature"><i class="fas fa-file-alt"></i> Notes Internes</span>
+                            </div>
+                            <button class="btn btn-secondary open-mandate-modal" data-mandate-id="mandate-001">Détails Mandat</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Propriété 2 -->
+                     <div class="property-card penthouse">
+                        <div class="property-badge">Mandat Exclusif</div>
+                        <div class="property-image">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/properties/penthouse-paris.jpg" alt="Penthouse avec vue sur Paris">
+                        </div>
+                        <div class="property-content">
+                            <span class="property-location">Paris 8ème</span>
+                            <h3 class="property-title">Penthouse d'exception avec terrasse</h3>
+                             <p class="property-price">Commission Indicative : 2.5%</p>
+                            <div class="property-features">
+                                <span class="property-feature"><i class="fas fa-ruler-combined"></i> 320 m²</span>
+                                <span class="property-feature"><i class="fas fa-bed"></i> 4 chambres</span>
+                                <span class="property-feature"><i class="fas fa-file-alt"></i> Notes Internes</span>
+                            </div>
+                            <button class="btn btn-secondary open-mandate-modal" data-mandate-id="mandate-002">Détails Mandat</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Propriété 3 -->
+                    <div class="property-card chalet off-market">
+                        <div class="property-badge">Off-Market</div>
+                        <div class="property-image">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/properties/chalet-snow.jpg" alt="Chalet de luxe à Courchevel">
+                        </div>
+                        <div class="property-content">
+                            <span class="property-location">Courchevel 1850</span>
+                            <h3 class="property-title">Chalet de luxe skis aux pieds</h3>
+                             <p class="property-price">Commission Négociable</p>
+                            <div class="property-features">
+                                <span class="property-feature"><i class="fas fa-ruler-combined"></i> 550 m²</span>
+                                <span class="property-feature"><i class="fas fa-bed"></i> 7 chambres</span>
+                                <span class="property-feature"><i class="fas fa-file-alt"></i> Accès Restreint</span>
+                            </div>
+                            <button class="btn btn-secondary open-mandate-modal" data-mandate-id="mandate-003">Détails Mandat</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Propriété 4 -->
+                    <div class="property-card domaine">
+                        <div class="property-badge">Mandat Co-Exclusif</div>
+                        <div class="property-image">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/properties/domaine-provence.jpg" alt="Domaine viticole en Provence">
+                        </div>
+                        <div class="property-content">
+                            <span class="property-location">Luberon, Provence</span>
+                            <h3 class="property-title">Domaine viticole avec bastide XVIIIe</h3>
+                            <p class="property-price">Commission Partagée : 1.5% / 1.5%</p>
+                            <div class="property-features">
+                                <span class="property-feature"><i class="fas fa-ruler-combined"></i> 600 m²</span>
+                                <span class="property-feature"><i class="fas fa-wine-glass-alt"></i> 15 hectares</span>
+                                <span class="property-feature"><i class="fas fa-file-alt"></i> Notes Internes</span>
+                            </div>
+                            <button class="btn btn-secondary open-mandate-modal" data-mandate-id="mandate-004">Détails Mandat</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Propriété 5 -->
+                    <div class="property-card appartement">
+                         <div class="property-badge">Mandat Exclusif</div>
+                        <div class="property-image">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/properties/appartement-monaco.jpg" alt="Appartement de luxe à Monaco">
+                        </div>
+                        <div class="property-content">
+                            <span class="property-location">Monte-Carlo, Monaco</span>
+                            <h3 class="property-title">Appartement prestige face au port</h3>
+                             <p class="property-price">Commission Indicative : 3.5%</p>
+                            <div class="property-features">
+                                <span class="property-feature"><i class="fas fa-ruler-combined"></i> 280 m²</span>
+                                <span class="property-feature"><i class="fas fa-bed"></i> 3 chambres</span>
+                                 <span class="property-feature"><i class="fas fa-file-alt"></i> Notes Internes</span>
+                            </div>
+                            <button class="btn btn-secondary open-mandate-modal" data-mandate-id="mandate-005">Détails Mandat</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Propriété 6 -->
+                    <div class="property-card villa">
+                        <div class="property-badge">Nouveau Mandat</div>
+                        <div class="property-image">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/properties/villa-ibiza.jpg" alt="Villa contemporaine à Ibiza">
+                        </div>
+                        <div class="property-content">
+                            <span class="property-location">Ibiza, Espagne</span>
+                            <h3 class="property-title">Villa d'architecte vue sur mer</h3>
+                            <p class="property-price">Commission Indicative : 3%</p>
+                            <div class="property-features">
+                                <span class="property-feature"><i class="fas fa-ruler-combined"></i> 420 m²</span>
+                                <span class="property-feature"><i class="fas fa-bed"></i> 6 chambres</span>
+                                <span class="property-feature"><i class="fas fa-file-alt"></i> Dossier Complet</span>
+                            </div>
+                            <button class="btn btn-secondary open-mandate-modal" data-mandate-id="mandate-006">Détails Mandat</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="properties-cta">
+                    <a href="#" class="btn btn-primary">Voir tous les mandats</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modale Détails Mandat (Structure de base) -->
+        <div id="mandate-modal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+                <h2 id="modal-mandate-title">Détails du Mandat</h2>
+                <div class="modal-body">
+                    <!-- Contenu chargé dynamiquement ou statique pour simulation -->
+                    <h3 id="modal-property-title">Villa contemporaine vue panoramique</h3>
+                    <p><strong class="modal-label">Localisation:</strong> <span id="modal-property-location">Saint-Jean-Cap-Ferrat</span></p>
+                    <p><strong class="modal-label">Type de Mandat:</strong> <span id="modal-mandate-type">Exclusif</span></p>
+                    <p><strong class="modal-label">Commission Agent:</strong> <span id="modal-commission">3% Indicative</span></p>
+                    <hr class="modal-divider">
+                    <h4><i class="fas fa-user-tie"></i> Informations Client Vendeur (Confidentiel)</h4>
+                    <p id="modal-seller-info">Contact principal : M. Durand (Visites sur RDV uniquement via l'agent référent).</p>
+                    <h4><i class="fas fa-file-contract"></i> Détails du Mandat</h4>
+                    <p><strong class="modal-label">Référence:</strong> <span id="modal-mandate-ref">LUX-SJCF-001</span></p>
+                    <p><strong class="modal-label">Date d'expiration:</strong> <span id="modal-mandate-expiry">31/12/2024</span></p>
+                    <p><strong class="modal-label">Prix demandé (net vendeur):</strong> <span id="modal-price-net">14 000 000 €</span></p>
+                     <h4><i class="fas fa-info-circle"></i> Notes Internes</h4>
+                    <p id="modal-internal-notes">Travaux de rafraîchissement de la piscine à prévoir. Négociation possible autour de 13.8M€. Vendeur motivé, recherche vente rapide avant fin d'année.</p>
+                     <div class="modal-actions">
+                        <a href="#" class="btn btn-primary"><i class="fas fa-folder-open"></i> Accéder au Dossier Complet</a>
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-calendar-alt"></i> Planifier une Visite Interne</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Section (Anciennement Services) -->
+        <section id="resources" class="services-section">
+            <div class="container">
+                <div class="services-intro">
+                    <h2>Outils & <strong>Ressources Agents</strong></h2>
+                    <p>Nous mettons à votre disposition des outils de pointe et un support dédié pour maximiser votre performance et votre expertise.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Ressource 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>CRM LuxConnect</h3>
+                        <p>Notre CRM propriétaire : gestion centralisée des clients, suivi des transactions, pipeline de ventes et rappels automatiques. Synchronisé avec vos appareils.</p>
+                        <a href="#" class="resource-link">Accéder à LuxConnect <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Ressource 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Studio Marketing</h3>
+                        <p>Bibliothèque complète : brochures personnalisables, présentations HD, vidéos professionnelles, modèles d'emailing et accès à notre réseau de photographes agréés.</p>
+                         <a href="#" class="resource-link">Explorer le Studio <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Ressource 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                           <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3>Support Juridique & Conformité</h3>
+                        <p>Accès direct à nos experts juridiques : validation de contrats, conseils en fiscalité immobilière internationale, veille réglementaire et conformité RGPD.</p>
+                         <a href="#" class="resource-link">Consulter l'équipe juridique <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                     <!-- Ressource 4 (Formation) -->
+                    <div class="service-card" id="training">
+                        <div class="service-icon">
+                           <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Académie Luxclusivity</h3>
+                        <p>Modules e-learning et webinaires : Marché Ultra-Luxe, Négociation Avancée, Marketing Digital pour le Prestige, Fiscalité Internationale, Technologies Immobilières.</p>
+                         <a href="#" class="resource-link">Voir le catalogue de formations <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                     <!-- Ressource 5 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                           <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Analyses de Marché</h3>
+                        <p>Rapports trimestriels exclusifs sur les tendances du marché du luxe par région, analyses comparatives et prévisions. Outil d'estimation en ligne.</p>
+                         <a href="#" class="resource-link">Accéder aux rapports <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                     <!-- Ressource 6 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                           <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Réseau International</h3>
+                        <p>Annuaire interactif des agents Luxclusivity dans le monde, forum de discussion interne pour partage d'opportunités et événements de networking exclusifs.</p>
+                         <a href="#" class="resource-link">Explorer le réseau <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agent Testimonials Section (Anciennement Testimonials) -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="testimonials-intro">
+                    <h2>Paroles d'<strong>Agents</strong></h2>
+                    <p>Découvrez comment le réseau Luxclusivity a propulsé la carrière de nos agents partenaires.</p>
+                </div>
+                <div class="testimonials-slider">
+                    <!-- Agent Testimonial 1 -->
+                    <div class="testimonial">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">Le partage de mandats exclusifs au sein du réseau m'a permis de conclure des transactions que je n'aurais jamais pu atteindre seul. Les outils marketing sont aussi un atout majeur.</p>
+                        <p class="testimonial-author">Antoine Dubois</p>
+                        <p class="testimonial-role">Agent Luxclusivity, Paris</p>
+                    </div>
+                    
+                    <!-- Agent Testimonial 2 -->
+                     <div class="testimonial">
+                        <div class="testimonial-rating">
+                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">La formation continue offerte par l'Académie Luxclusivity est exceptionnelle. J'ai pu affiner mes compétences en négociation et maîtriser les subtilités du marché ultra-luxe.</p>
+                        <p class="testimonial-author">Elena Petrova</p>
+                        <p class="testimonial-role">Agent Luxclusivity, Côte d'Azur</p>
+                    </div>
+                    
+                     <!-- Agent Testimonial 3 -->
+                    <div class="testimonial">
+                         <div class="testimonial-rating">
+                           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">L'accès au CRM et le support juridique simplifient énormément mon quotidien. Je peux me concentrer sur ce que je fais de mieux : connecter les clients avec des biens d'exception.</p>
+                        <p class="testimonial-author">David Müller</p>
+                        <p class="testimonial-role">Agent Luxclusivity, Alpes</p>
+                    </div>
+                     <!-- Agent Testimonial 4 -->
+                    <div class="testimonial">
+                         <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">La réputation de Luxclusivity ouvre des portes incroyables. Les clients internationaux nous font confiance, ce qui facilite grandement l'accès aux mandats les plus prestigieux.</p>
+                        <p class="testimonial-author">Chen Wang</p>
+                        <p class="testimonial-role">Agent Luxclusivity, Monaco</p>
+                    </div>
+                     <!-- Agent Testimonial 5 -->
+                    <div class="testimonial">
+                         <div class="testimonial-rating">
+                           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">Le réseau n'est pas juste un nom, c'est une véritable communauté. L'entraide entre agents et les événements exclusifs sont une source constante d'inspiration et d'opportunités.</p>
+                        <p class="testimonial-author">Sophia Rossi</p>
+                        <p class="testimonial-role">Agent Luxclusivity, International</p>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button id="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section (Anciennement Contact) -->
+        <section id="support" class="contact-section">
+            <div class="container">
+                <div class="contact-columns">
+                    <div class="contact-info">
+                        <h2>Support <strong>Agent</strong></h2>
+                        <p>Notre équipe est là pour vous assister. Contactez-nous pour toute question concernant les mandats, les outils ou le réseau.</p>
+                        <div class="contact-detail">
+                            <h3>Support Technique & Outils</h3>
+                            <p><a href="mailto:techsupport.agent@luxclusivity.com">techsupport.agent@luxclusivity.com</a></p>
+                        </div>
+                        <div class="contact-detail">
+                            <h3>Support Mandats & Transactions</h3>
+                             <p><a href="mailto:mandate.support@luxclusivity.com">mandate.support@luxclusivity.com</a></p>
+                        </div>
+                         <div class="contact-detail">
+                            <h3>Support Marketing</h3>
+                             <p><a href="mailto:marketing.agent@luxclusivity.com">marketing.agent@luxclusivity.com</a></p>
+                        </div>
+                         <div class="contact-social">
+                            <p>Rejoignez notre groupe privé :</p>
+                            <a href="#" title="Groupe LinkedIn Agents"><i class="fab fa-linkedin-in"></i></a>
+                             <a href="#" title="Forum Interne Agents"><i class="fas fa-comments"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                         <h3>Envoyer une demande de support</h3>
+                        <div class="form-group">
+                            <label for="agent-name">Votre Nom</label>
+                            <input type="text" id="agent-name" class="form-control" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="agent-id">Votre ID Agent</label>
+                            <input type="text" id="agent-id" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="support-topic">Sujet de la demande</label>
+                             <select id="support-topic" class="form-control" required>
+                                <option value="">Choisir un sujet...</option>
+                                <option value="mandate">Question sur un mandat</option>
+                                <option value="crm">Problème CRM</option>
+                                <option value="marketing">Demande Marketing</option>
+                                <option value="legal">Question Juridique</option>
+                                <option value="training">Information Formation</option>
+                                 <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Votre message</label>
+                            <textarea id="message" class="form-control" required rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                         <a href="index.html" class="logo-container">
+                            <div class="logo-emblem">
+                                <div class="logo-diamond"></div>
+                                <i class="fas fa-network-wired logo-house"></i>
+                                <i class="fas fa-user-tie logo-key"></i>
+                            </div>
+                            <span id="logo-text">Luxclusivity</span>
+                        </a>
+                    </div>
+                    <p>Le portail exclusif des agents partenaires du réseau Luxclusivity.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Accès Rapide</h3>
+                    <ul class="footer-links">
+                         <li><a href="#mandates">Mandats</a></li>
+                         <li><a href="#values">Valeurs</a></li>
+                         <li><a href="#resources">Ressources</a></li>
+                         <li><a href="#training">Formation</a></li>
+                         <li><a href="#network">Le Réseau</a></li>
+                         <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-column">
+                    <h3>Ressources Clés</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Base de connaissances</a></li>
+                        <li><a href="#">Documents Marketing</a></li>
+                        <li><a href="#">Modèles Juridiques</a></li>
+                        <li><a href="#">Calendrier Formations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Légal (Agents)</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Charte de l'Agent</a></li>
+                        <li><a href="#">Politique de Confidentialité Réseau</a></li>
+                        <li><a href="#">Conditions d'Utilisation Portail</a></li>
+                    </ul>
+                     <div class="footer-social">
+                        <a href="#" title="Groupe LinkedIn Agents"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Forum Interne Agents"><i class="fas fa-comments"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2023</span> Portail Agent Luxclusivity. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton de changement de thème -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+        <i class="fas fa-moon icon-dark" aria-hidden="true"></i>
+        <i class="fas fa-sun icon-light" aria-hidden="true"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
